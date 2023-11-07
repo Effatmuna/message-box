@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(240, 23%, 15%);
+    color: aliceblue;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-size: 13px;
+    color:#AFB6BC;
+}
+
+button {
+    font-size: 13px;
+    border: none;
+    border-radius: 2px;
+
+}
+
+.talk-bubble {
+    margin: 20px 0px;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    background-color: #27293F;
+    padding: 20px 20px 0px 20px;
+    border-radius: 1px;
+
+}
+
+.hours {
+    color: #515E74;
+    font-style: italic;
+}
+
+.line {
+    width: 3px;
+    height: 660px;
+    background-color: #25283D;
+    position: absolute;
+    left: 25%;
+    top: 5%;
+}
+
+img {
+    border: 8px solid;
+    border-radius: 50%;
+    position: absolute;
+    left: -16%;
+    top: 0%;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border1.left-in:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: 30px;
+    bottom: auto;
+    border: 1px solid;
+    border-radius: 5px;
+
+    clip-path: polygon(100% 0%, 100% 55%, 100% 100%, 96% 100%, 0% 50%, 81% 11%);
+}
+
+.tri-right.left-in:after {
+    content: ' ';
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background-color: #27293F;
+    left: -12px;
+    right: auto;
+    top: -5px;
+    bottom: auto;
+    overflow: hidden;
+    border-left: 1px solid hsl(240, 23%, 15%);
+    border-radius: 100%;
+
+    clip-path: polygon(100% 0%, 100% 55%, 100% 100%, 96% 100%, 0% 50%, 81% 11%);
+    z-index: -1;
+}
